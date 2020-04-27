@@ -1,0 +1,61 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  text-align: center;
+}
+
+h1 {
+  font:bold 60px verdana, sans-serif;
+}
+
+h2{
+  font:bold 20px  verdana, sans-serif;
+}
+
+p{
+  font: 15px verdana , sans-serif;
+}
+
+header, nav, section, aside, article, footer, figcaption, figcaption, hgroup{
+ display: block;
+}
+
+#agrupar{
+  width: 960px;
+  margin: 15px auto;
+  text-align:left;
+  /* border: 1px solid rgb(0,0,0); */
+}
+
+#cabecera{
+  text-align:center;
+  border: 1px solid rgb(0,0,0);
+}
+
+#seccion {
+  margin: 30px;
+  width: 670px;
+  border:1px solid rgb(0,0,0);
+  float: left;
+}
+
+#articulo{
+  margin: 15px;
+  padding:10px;
+  border: 1px solid rgb(0,0,0);
+}
+
+#lado {
+  float: left;
+  border: 1px solid rgb(0,0,0);
+
+}
+
+#pie{
+  clear: both;
+  margin: 15px;
+  border: 1px solid rgb(0,0,0);
+}
