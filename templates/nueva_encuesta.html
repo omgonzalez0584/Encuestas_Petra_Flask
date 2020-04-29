@@ -2,12 +2,13 @@
 <html>
 <head>
 <title>Agregar nueva encuesta</title>
+<link rel="stylesheet" href="/static/css/nueva_encuesta.css">
 </head>
 
 <body>
 
-  <div>
-    <header>
+  <div id="agrupar">
+    <header id="cabecera">
       <h1>AGREGAR NUEVA ENCUESTA</h1>
     </header>
 
@@ -19,7 +20,7 @@
       {%- endfor %}
     </nav>
 
-    <section>
+    <section id="seccion">
       <form action="{{ request.path }}" method="post">
             <label>Pregunta</label>
             <input type="text" size ="70"  name="pregunta"><br>
@@ -30,10 +31,6 @@
             <input type="submit" value="Crear">
       </form>
     </section>
-
-    <footer>
-        Derechos reservados &copy; 2017-2018
-    </footer>
 
   </div>
 </body>
