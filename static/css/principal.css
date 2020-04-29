@@ -58,7 +58,7 @@ header, nav, section, aside, article, footer, figcaption, figcaption, hgroup{
 #articulo{
   margin: 15px;
   padding:10px;
-  background-color:  rgb(102, 153, 255);
+  background-color:  rgb(153, 204, 255);
   border-radius: 10px;
   text-align: left;
 }
@@ -93,11 +93,9 @@ input[type=submit]{
   font: bold 15px mifuente, verdana,sans-serif;
 }
 
-meter{
-  -webkit-appearance: none; /* for Chrome, Safari */
-  -moz-appearance: none; /* for Firefox */
-   appearance: none;
-  width:50%;
+progress{
+  width: 70%;
+  border: 0px;
 }
 
 #boton_link:link , #boton_link:visited{
