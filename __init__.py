@@ -76,9 +76,11 @@ def votar():
 def conteo():
     if request.method == 'POST':
         opc = request.form['opc']
+        print(opc)
         id = request.form['id']
+        print(id)
         u = encuesta.query.get(id)
-        print(u)
+        #print(u)
         if opc == 'a':
             flag = int(u.voto1)
             flag = flag + 1
@@ -106,6 +108,3 @@ def conteo():
 if __name__=='__main__':
     app.run()
     db.create_all()
-
-
-
