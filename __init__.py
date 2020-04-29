@@ -28,13 +28,14 @@ class encuesta(db.Model):
         self.voto2 = voto2
         self.cantidad = cantidad
 
-
+#Renderiza la pagina principal
 @app.route('/')
 def principal():
     print(encuesta.query.all())
     return render_template('principal.html', encuesta=encuesta.query.all())
 
 
+#Agrega nueva cuenta al sistema
 @app.route('/nueva_encuesta/', methods=['GET','POST'])
 def nueva_encuesta():
     if request.method == 'POST':
@@ -58,20 +59,10 @@ def nueva_encuesta():
             flash('Se crea encuesta exitosamente!')
             return redirect(url_for('principal'))
 
-
-
     return render_template('nueva_encuesta.html')
 
-@app.route('/votar/', methods = ['GET','POST'])
-def votar():
-    if request.method == 'POST':
-        opc = request.form['id']
-        print(opc)
-        u = encuesta.query.get(opc)
-        print(u)
-        return render_template('votacion.html',u=encuesta.query.get(opc))
 
-
+#Realiza conteo de votos
 @app.route('/conteo/',methods = ['GET','POST'])
 def conteo():
     if request.method == 'POST':
@@ -100,10 +91,6 @@ def conteo():
             db.session.commit()
 
     return redirect(url_for('principal'))
-
-
-
-
 
 if __name__=='__main__':
     app.run()
